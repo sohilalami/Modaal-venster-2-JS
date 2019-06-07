@@ -1,6 +1,6 @@
 const modaalVenster = {
-	alleInhoud: document.querySelectorAll('.modaalContent'),
-	alleKnoppen: document.querySelectorAll('.modaal-knop'),
+	alleInhoud: document.querySelectorAll('.Content'),
+	alleKnoppen: document.querySelectorAll('.Button'),
 
 	maakAchtergrond() {
 		let achtergrond = document.createElement('div');
@@ -12,7 +12,7 @@ const modaalVenster = {
 		let modaal = document.createElement('div');
 		modaal.className = 'modaal';
 		modaal.addEventListener('click', (evt) => evt.stopPropagation());
-		return modaal;	
+		return modaal;
 	},
 	maakSluitKnop() {
 		let sluitknop = document.createElement('div');
