@@ -2,19 +2,19 @@ const modaalVenster = {
 	alleInhoud: document.querySelectorAll('.Content'),
 	alleKnoppen: document.querySelectorAll('.Button'),
 
-	maakAchtergrond() {
+	background() {
 		let achtergrond = document.createElement('div');
 		achtergrond.classList.add('modaal-achtergrond');
 		achtergrond.addEventListener('click', () => this.sluiten());
 		return achtergrond;
 	},
-	maakModaal() {
+	modaal() {
 		let modaal = document.createElement('div');
 		modaal.className = 'modaal';
 		modaal.addEventListener('click', (evt) => evt.stopPropagation());
 		return modaal;
 	},
-	maakSluitKnop() {
+	closebutton() {
 		let sluitknop = document.createElement('div');
 		sluitknop.className = 'sluit-knop';
 		sluitknop.innerHTML = '&#x00D7';
@@ -22,9 +22,9 @@ const modaalVenster = {
 		return sluitknop;
 	},
 	open(elem) {
-		this.achtergrond = this.maakAchtergrond();
-		this.sluitKnop   = this.maakSluitKnop();
-		this.modaal      = this.maakModaal();
+		this.achtergrond = this.background();
+		this.sluitKnop   = this.CloseButton();
+		this.modaal      = this.Modaal();
 		this.modaal       .appendChild(this.sluitKnop);
         this.modaal       .appendChild(elem);
 		this.achtergrond  .appendChild(this.modaal);
